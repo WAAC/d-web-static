@@ -1,0 +1,20 @@
+{
+  "name": "d-web-static",
+  "version": "1.0.0",
+  "description": "Static theme",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch sass:css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WAAC/d-web-static.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WAAC/d-web-static/issues"
+  },
+  "homepage": "https://github.com/WAAC/d-web-static#readme"
+}
