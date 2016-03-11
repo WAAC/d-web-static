@@ -19,7 +19,9 @@ body {
   color: #7f7f7f;
   background: #fff;
   height: 100%;
-  position: relative; }
+  position: relative; 
+  text-decoration:none;
+  }
 
 a {
   color: #6173f4;
@@ -566,3 +568,44 @@ h1, h2, h3, h4, h5, h6 {
   animation-fill-mode: both; }
 
 /*# sourceMappingURL=style.css.map */
+.navbar-login
+{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.icon-size
+{
+    font-size: 87px;
+}
+#post-pro{
+	margin-top:5%;
+}
+#photo-btn{
+	padding:6px;
+}
+/* box */
+ body{margin:50px;}
+      #accordion .glyphicon { margin-right:10px; }
+      .panel-collapse>.list-group .list-group-item:first-child {border-top-right-radius: 0;border-top-left-radius: 0;}
+      .panel-collapse>.list-group .list-group-item {border-width: 1px 0;}
+      .panel-collapse>.list-group {margin-bottom: 0;}
+      .panel-collapse .list-group-item {border-radius:0;}
+
+      .panel-collapse .list-group .list-group {margin: 0;margin-top: 10px;}
+      .panel-collapse .list-group-item li.list-group-item {margin: 0 -15px;border-top: 1px solid #ddd !important;border-bottom: 0;padding-left: 30px;}
+      .panel-collapse .list-group-item li.list-group-item:last-child {padding-bottom: 0;}
+
+      .panel-collapse div.list-group div.list-group{margin: 0;}
+      .panel-collapse div.list-group .list-group a.list-group-item {border-top: 1px solid #ddd !important;border-bottom: 0;padding-left: 30px;}
+      .panel-collapse .list-group-item li.list-group-item {border-top: 1px solid #DDD !important;}
+	  
+#box-pro{margin-top:5%;}
