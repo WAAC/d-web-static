@@ -1,20 +1,60 @@
 {
-  "name": "d-web-static",
-  "version": "1.0.0",
-  "description": "Static theme",
-  "main": "index.js",
+  "name": "s3-uploader",
+  "version": "1.1.0",
+  "description": "Resize, rename, and upload images to AWS S3",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "start": "sass --watch sass:css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "coffee -c -b -o lib/ src/*.coffee",
+    "prepublish": "coffee -c -b -o lib/ src/*.coffee",
+    "postpublish": "rm -rf lib/*",
+    "hint": "coffeelint src test",
+    "test": "mocha --compilers coffee:coffee-script/register test/suite.coffee",
+    "watch": "mocha -w -b -c --check-leaks -R progress --compilers coffee:coffee-script/register test/suite.coffee"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WAAC/d-web-static.git"
+    "url": "git://github.com/Turistforeningen/node-s3-uploader.git"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "aws",
+    "s3",
+    "imagemagic",
+    "image",
+    "resize",
+    "rename",
+    "upload",
+    "versions"
+  ],
+  "contributors": [
+    "Håvard Ranum <havard.ranum@bouvet.no>",
+    "Hans Kristian Flaatten <hans.kristian.flaatten@turistforeningen.no>",
+    "Anthony Ringoet <anthonyringoet@gmail.com>",
+    "Luiz Freneda <lfreneda@gmail.com>",
+    "Oleksii Sribnyi <me@codemanki.com>"
+  ],
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WAAC/d-web-static/issues"
+    "url": "https://github.com/Turistforeningen/node-s3-uploader/issues"
   },
-  "homepage": "https://github.com/WAAC/d-web-static#readme"
+  "homepage": "https://github.com/Turistforeningen/node-s3-uploader",
+  "devDependencies": {
+    "coffee-script": "~1",
+    "coffeelint": "~1",
+    "mocha": "~2",
+    "uuid": "^2"
+  },
+  "dependencies": {
+    "@starefossen/rand-path": "^1.0.1",
+    "async": "~1.4",
+    "aws-sdk": "^2.2.9",
+    "im-metadata": "~2.2",
+    "im-resize": "~2.3"
+  },
+  "engines": {
+    "node": ">=0.10",
+    "iojs": ">=1.0.0"
+  }
 }
